@@ -7,7 +7,7 @@
 #include "IReceiver.generated.h"
 
 // This class does not need to be modified.
-UINTERFACE()
+UINTERFACE(Blueprintable)
 class UIReceiver : public UInterface
 {
 	GENERATED_BODY()

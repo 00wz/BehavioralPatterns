@@ -7,17 +7,11 @@
 #include "UObject/Interface.h"
 #include "ICommand.generated.h"
 
-// This class does not need to be modified.
-UINTERFACE()
-class UICommand : public UInterface
-{
-	GENERATED_BODY()
-};
-
 /**
  * defines the command interface
  */
-class BEHAVIORALPATTERNS_API IICommand
+UCLASS(Abstract)
+class BEHAVIORALPATTERNS_API UCommand: public UObject
 {
 	GENERATED_BODY()
 
@@ -28,7 +22,7 @@ public:
 	 * pointer to the receiver
 	 */
 	UPROPERTY(BlueprintReadWrite, Category=IICommand, meta = (ExposeOnSpawn="true"))
-	IIReceiver* Receiver;
+	TScriptInterface<IIReceiver> Receiver;
 	
 	/*
 	 * executes a command

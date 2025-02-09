@@ -10,7 +10,7 @@
 /**
  * command initiator - calls a command to execute a specific request
  */
-UCLASS()
+UCLASS(Blueprintable)
 class BEHAVIORALPATTERNS_API UInvoker : public UObject
 {
 	GENERATED_BODY()
@@ -19,16 +19,19 @@ private:
 	/*
 	 * command history
 	 */
-	TArray<IICommand> CommandsCache;
+	UPROPERTY()
+	TArray<UCommand*> CommandsCache;
 
 public:
 	/*
 	 * run the command
 	 */
-	void RunCommand(IICommand Command);
+	UFUNCTION(BlueprintCallable, Category=Invoker)
+	void RunCommand(UCommand* Command);
 
 	/*
 	 * cancel the last command
 	 */
+	UFUNCTION(BlueprintCallable, Category=Invoker)
 	void Undo();
 };

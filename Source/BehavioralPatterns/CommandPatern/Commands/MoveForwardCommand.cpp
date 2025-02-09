@@ -5,10 +5,10 @@
 
 void UMoveForwardCommand::Execute_Implementation()
 {
-	Receiver->MoveForward();
+	Receiver->Execute_MoveForward(Receiver.GetObjectRef());
 }
 
 void UMoveForwardCommand::Undo_Implementation()
 {
-	Receiver->MoveBack();
+	Receiver->Execute_MoveBack(Receiver.GetObjectRef());
 }

@@ -5,10 +5,10 @@
 
 void UMoveLeftCommand::Execute_Implementation()
 {
-	Receiver->MoveLeft();
+	Receiver->Execute_MoveLeft(Receiver.GetObjectRef());
 }
 
 void UMoveLeftCommand::Undo_Implementation()
 {
-	Receiver->MoveRight();
+	Receiver->Execute_MoveRight(Receiver.GetObjectRef());
 }

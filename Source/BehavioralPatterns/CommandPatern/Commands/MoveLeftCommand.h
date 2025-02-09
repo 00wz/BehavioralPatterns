@@ -10,8 +10,8 @@
 /**
  * 
  */
-UCLASS()
-class BEHAVIORALPATTERNS_API UMoveLeftCommand : public UObject, public IICommand
+UCLASS(Blueprintable)
+class BEHAVIORALPATTERNS_API UMoveLeftCommand :  public UCommand
 {
 	GENERATED_BODY()
 

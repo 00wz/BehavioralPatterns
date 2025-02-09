@@ -3,10 +3,10 @@
 
 #include "Invoker.h"
 
-void UInvoker::RunCommand(IICommand Command)
+void UInvoker::RunCommand(UCommand* Command)
 {
 	CommandsCache.Push(Command);
-	Command.Execute();
+	Command->Execute();
 }
 
 void UInvoker::Undo()
@@ -15,5 +15,5 @@ void UInvoker::Undo()
 	{
 		return;
 	}
-	CommandsCache.Pop().Undo();
+	CommandsCache.Pop()->Undo();
 }
