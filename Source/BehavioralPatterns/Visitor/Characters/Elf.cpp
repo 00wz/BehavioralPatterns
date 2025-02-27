@@ -32,7 +32,7 @@ void AElf::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void AElf::Accept(TScriptInterface<IIVisitor> visitor)
+void AElf::Accept_Implementation(const TScriptInterface<IIVisitor>& visitor)
 {
 	visitor->VisitElf(this);
 }

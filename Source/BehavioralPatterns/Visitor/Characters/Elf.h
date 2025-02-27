@@ -27,5 +27,5 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	virtual void Accept(TScriptInterface<IIVisitor> visitor) override;
+	virtual void Accept_Implementation(const TScriptInterface<IIVisitor>& visitor) override;
 };

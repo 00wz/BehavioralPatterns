@@ -9,15 +9,15 @@
 
 void UPotion::VisitElf(AElf* Elf)
 {
-	Elf->Say(FString(TEXT("Собираю")));
+	Elf->Execute_Say(Elf,FString(TEXT("Собираю")));
 }
 
 void UPotion::VisitMonster(AMonster* Monster)
 {
-	Monster->Say(FString(TEXT("Не знаю, что с этим делать")));
+	Monster->Execute_Say(Monster,FString(TEXT("Не знаю, что с этим делать")));
 }
 
 void UPotion::VisitWizard(AWizard* Wizard)
 {
-	Wizard->Say(FString(TEXT("Готовлю зелье")));
+	Wizard->Execute_Say(Wizard, FString(TEXT("Готовлю зелье")));
 }

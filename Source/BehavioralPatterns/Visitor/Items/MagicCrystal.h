@@ -10,7 +10,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class BEHAVIORALPATTERNS_API UMagicCrystal : public UObject, public IIVisitor
 {
 	GENERATED_BODY()

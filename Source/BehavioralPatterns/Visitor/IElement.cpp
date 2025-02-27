@@ -5,6 +5,3 @@
 
 
 // Add default functionality here for any IIElement functions that are not pure virtual.
-void IIElement::Accept(TScriptInterface<IIVisitor> visitor)
-{
-}

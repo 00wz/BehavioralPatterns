@@ -9,15 +9,15 @@
 
 void UTrap::VisitElf(AElf* Elf)
 {
-	Elf->Say(FString(TEXT("Могу перепрыгнуть")));
+	Elf->Execute_Say(Elf, FString(TEXT("Могу перепрыгнуть")));
 }
 
 void UTrap::VisitMonster(AMonster* Monster)
 {
-	Monster->Say(FString(TEXT("Ломаю")));
+	Monster->Execute_Say(Monster, FString(TEXT("Ломаю")));
 }
 
 void UTrap::VisitWizard(AWizard* Wizard)
 {
-	Wizard->Say(FString(TEXT("Попадаюсь")));
+	Wizard->Execute_Say(Wizard, FString(TEXT("Попадаюсь")));
 }

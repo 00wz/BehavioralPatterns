@@ -32,7 +32,7 @@ void AWizard::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void AWizard::Accept(TScriptInterface<IIVisitor> visitor)
+void AWizard::Accept_Implementation(const TScriptInterface<IIVisitor>& visitor)
 {
 	visitor->VisitWizard(this);
 }

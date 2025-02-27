@@ -32,7 +32,7 @@ void AMonster::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
-void AMonster::Accept(TScriptInterface<IIVisitor> visitor)
+void AMonster::Accept_Implementation(const TScriptInterface<IIVisitor>& visitor)
 {
 	visitor->VisitMonster(this);
 }
