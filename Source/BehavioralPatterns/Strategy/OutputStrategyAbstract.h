@@ -13,6 +13,8 @@ UCLASS(Abstract, Blueprintable)
 class BEHAVIORALPATTERNS_API UOutputStrategyAbstract : public UObject
 {
 	GENERATED_BODY()
+	
+	//for creating widgets from uobjects
 	UWorld* GetWorld() const override
 	{
 		if (IsTemplate() || !GetOuter()) // We're the CDO or have no outer (?!).
@@ -21,6 +23,7 @@ class BEHAVIORALPATTERNS_API UOutputStrategyAbstract : public UObject
 		}
 		return GetOuter()->GetWorld();
 	}
+	
 public:
 	
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
